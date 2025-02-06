@@ -28,3 +28,6 @@ const LoginBox = ({setPage}) => {
 };
 
 export default LoginBox;
+};
+
+export default LoginBox;
