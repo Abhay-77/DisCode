@@ -8,6 +8,10 @@ const userSchema = z.object({
 });
 
 export async function signInUser(formData) {
+  const parsedData = userSchema.safeParse(formData)
+  if (!parsedData.success) {
+      
+  }
   if (await isEmailExists(formData.email)) {
     alert("Account already exists");
     return;
@@ -29,7 +33,6 @@ export async function isEmailExists(email) {
     .from("Users")
     .select()
     .eq("email", email);
-  console.log(data);
   if (data.length != 0) {
     return data[0];
   } else {
@@ -38,8 +41,15 @@ export async function isEmailExists(email) {
 }
 
 export async function loginUser(formData) {
-  const data = isEmailExists(formData.email)
-  if (data.email == formData.email) {
-    
+  const data = await isEmailExists(formData.email);
+  if (
+    data &&
+    data.password == formData.password &&
+    data.email === formData.email
+  ) {
+    return data.id;
+  } else {
+    alert("Account doesn't exist");
+    return false;
   }
 }
