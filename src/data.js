@@ -31,8 +31,15 @@ export async function isEmailExists(email) {
     .eq("email", email);
   console.log(data);
   if (data.length != 0) {
-    return true;
+    return data[0];
   } else {
     return false;
+  }
+}
+
+export async function loginUser(formData) {
+  const data = isEmailExists(formData.email)
+  if (data.email == formData.email) {
+    
   }
 }

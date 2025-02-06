@@ -56,8 +56,8 @@ export default ({ setPage }) => {
           <button type="submit">Sign in</button>
         </form>
         <h3>
-          Already have an existing account?{" "}
-          <Link to="/" onClick={() => setPage("login")}>
+          Already have an existing account?
+          <Link to="/login" onClick={() => setPage("login")}>
             Log in
           </Link>
         </h3>

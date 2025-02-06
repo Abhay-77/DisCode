@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -28,11 +29,21 @@ function Navbar() {
           gap={8}
           mr={20}
         >
-          <Text fontSize="lg">Home</Text>
-          <Text fontSize="lg">Donations</Text>
-          <Text fontSize="lg">Camps</Text>
-          <Text fontSize="lg">Committee</Text>
-          <Text fontSize="lg">Login</Text>
+          <Text fontSize="lg">
+            <Link>Home</Link>
+          </Text>
+          <Text fontSize="lg">
+            <Link>Donations</Link>
+          </Text>
+          <Text fontSize="lg">
+            <Link>Camps</Link>
+          </Text>
+          <Text fontSize="lg">
+            <Link>Committee</Link>
+          </Text>
+          <Text fontSize="lg">
+            <Link to='/login'>Login</Link>
+          </Text>
         </Box>
       </Box>
     </>
