@@ -1,5 +1,8 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Img, Text } from "@chakra-ui/react";
 import React from "react";
+import logo from "../assets/logo.png";
+
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -16,8 +19,9 @@ function Navbar() {
         w={"100%"}
         zIndex={999}
       >
-        <Box>
-          <Text ml={20} fontSize="4xl" fontWeight={600}>
+        <Box display={"flex"} alignItems={"center"} flexDirection={"row"}>
+          <Img ml={20} src={logo} alt="logo" w={14}  />
+          <Text  ml={2} fontSize="4xl" fontWeight={600}>
             DisCode
           </Text>
         </Box>
@@ -29,21 +33,19 @@ function Navbar() {
           gap={8}
           mr={20}
         >
-          <Text fontSize="lg">
-            <Link>Home</Link>
-          </Text>
-          <Text fontSize="lg">
-            <Link>Donations</Link>
-          </Text>
-          <Text fontSize="lg">
-            <Link>Camps</Link>
-          </Text>
-          <Text fontSize="lg">
-            <Link>Committee</Link>
-          </Text>
+          <NavLink to = "/" >
+            <Text fontSize="lg">Home</Text>
+            </NavLink>
+          <Text fontSize="lg">Donations</Text>
+          <NavLink to = "/camps" >
+            <Text fontSize="lg">Camps</Text>
+          </NavLink>
+          <Text fontSize="lg">Committee</Text>
+          
           <Text fontSize="lg">
             <Link to='/login'>Login</Link>
           </Text>
+
         </Box>
       </Box>
     </>
