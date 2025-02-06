@@ -4,11 +4,8 @@ import { useState } from "react";
 
 const LoginBox = ({ setPage }) => {
   const [id, setId] = useState(null);
-  const [formData, setFormData] = useState({
-    email: "b",
-    password: "c",
-  });
-  const navigate = useNavigate()
+  const [formData, setFormData] = useState({});
+  const navigate = useNavigate();
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
@@ -16,8 +13,8 @@ const LoginBox = ({ setPage }) => {
     e.preventDefault();
     const t = loginUser(formData);
     setId(t);
-    if (t!=null) {
-      navigate('/')
+    if (t != null) {
+      navigate("/");
     }
   }
   return (

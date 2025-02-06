@@ -3,11 +3,7 @@ import { signInUser } from "../data";
 import { useState } from "react";
 
 export default ({ setPage }) => {
-  const [formData, setFormData] = useState({
-    username: "a",
-    email: "b",
-    password: "c",
-  });
+  const [formData, setFormData] = useState({});
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
