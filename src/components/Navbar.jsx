@@ -2,6 +2,8 @@ import { Box, Img, Text } from "@chakra-ui/react";
 import React from "react";
 import logo from "../assets/logo.png";
 
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
@@ -30,9 +32,13 @@ function Navbar() {
           gap={8}
           mr={20}
         >
-          <Text fontSize="lg">Home</Text>
+          <NavLink to = "/" >
+            <Text fontSize="lg">Home</Text>
+            </NavLink>
           <Text fontSize="lg">Donations</Text>
-          <Text fontSize="lg">Camps</Text>
+          <NavLink to = "/camps" >
+            <Text fontSize="lg">Camps</Text>
+          </NavLink>
           <Text fontSize="lg">Committee</Text>
           <Text fontSize="lg">Login</Text>
         </Box>
