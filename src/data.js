@@ -53,3 +53,13 @@ export async function loginUser(formData) {
     return false;
   }
 }
+
+export async function fetchCampsData() {
+  const {data,error} = await supabase.from('Camps').select()
+  if (error) {
+    return 0
+  } else {
+    console.log(data)
+    return data
+  }
+}
