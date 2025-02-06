@@ -11,10 +11,10 @@ import TransactionHistory from "./components/TransactionHistory.jsx";
 import TrustFunds from "./components/TrustFunds.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <ChakraProvider>
-    <BrowserRouter>
+  <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/camps" element={<Camps />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/camps" element={<Camps />} />
@@ -23,5 +23,4 @@ createRoot(document.getElementById("root")).render(
         <Route path="/transactionhistory" element={<TransactionHistory />} />
       </Routes>
     </BrowserRouter>
-  </ChakraProvider>,
 );

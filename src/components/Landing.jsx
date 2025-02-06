@@ -17,6 +17,7 @@ import help from "../assets/help.jpg";
 import hope from "../assets/hope.jpg";
 import food from "../assets/food.jpg";
 import "../components/style.css";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function Landing() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function Landing() {
 
   return (
     <>
+      <ChakraProvider>
       <Navbar />
       <Box>
         <Box
@@ -59,6 +61,7 @@ function Landing() {
             >
               " If not us, then who?
               <br /> If not now, when? "
+
             </Box>
             <Box>
               <Box
@@ -269,7 +272,8 @@ function Landing() {
             </TabPanel>
           </TabPanels>
         </Tabs>
-      </Box>
+        </Box>
+        </ChakraProvider>
     </>
   );
 }

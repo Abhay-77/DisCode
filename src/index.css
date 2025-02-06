@@ -59,10 +59,19 @@ body {
 }
 
 .loginpage {
-  background-color: hsl(0, 33%, 92%);
+  background-color: hsl(0, 5%, 78%);
   display: flex;
   min-width: 100vw;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+}
+
+.camppage {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(220, 218, 240);
 }

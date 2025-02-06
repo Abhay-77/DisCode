@@ -9,11 +9,11 @@ const LoginBox = ({ setPage }) => {
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    const t = loginUser(formData);
+    const t = await loginUser(formData);
     setId(t);
-    if (t != null) {
+    if (t) {
       navigate("/");
     }
   }
