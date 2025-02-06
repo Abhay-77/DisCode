@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Img, Text } from "@chakra-ui/react";
 import React from "react";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
@@ -15,8 +16,9 @@ function Navbar() {
         w={"100%"}
         zIndex={999}
       >
-        <Box>
-          <Text ml={20} fontSize="4xl" fontWeight={600}>
+        <Box display={"flex"} alignItems={"center"} flexDirection={"row"}>
+          <Img ml={20} src={logo} alt="logo" w={14}  />
+          <Text  ml={2} fontSize="4xl" fontWeight={600}>
             DisCode
           </Text>
         </Box>
