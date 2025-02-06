@@ -5,7 +5,9 @@ function Camps() {
   return (
     <>
       <Navbar />
-      <CampsTable />
+      <section className="camppage">
+        <CampsTable />
+      </section>
     </>
   );
 }

@@ -231,11 +231,11 @@ function Landing() {
               <TabPanel
                 bg={"gray.800"}
                 color={"white"}
-                fontSize="lg"
+                fontSize="sm"
                 fontWeight={500}
                 display={"flex"}
                 justifyContent={"center"}
-                h={"45vh"}
+                h={"44.5h"}
               >
                 Q1)How do i donate?
                 <br />
