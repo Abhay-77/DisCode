@@ -44,12 +44,12 @@ const LoginBox = ({ setPage }) => {
               required
             />
           </label>
-          <button type="submit">Sign in</button>
+          <button type="submit">Login</button>
         </form>
         <h3>
           Don't have an existing account?{" "}
           <Link to="/signin" onClick={() => setPage("signin")}>
-            Sign up
+            Sign Up
           </Link>
         </h3>
       </section>

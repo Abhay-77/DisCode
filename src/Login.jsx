@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import LoginBox from './components/LoginBox'
-import SignInBox from './components/SignInBox'
+import React, { useState } from "react";
+import LoginBox from "./components/LoginBox";
+import SignInBox from "./components/SignInBox";
 
 const Login = () => {
-  const [page, setPage] = useState("login")
+  const [page, setPage] = useState("login");
   return (
     <>
       <main className="loginpage">
@@ -12,6 +12,6 @@ const Login = () => {
       </main>
     </>
   );
-}
+};
 
-export default Login
+export default Login;

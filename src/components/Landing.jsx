@@ -16,7 +16,7 @@ import flood from "../assets/flood.jpg";
 import help from "../assets/help.jpg";
 import hope from "../assets/hope.jpg";
 import food from "../assets/food.jpg";
-import '../components/style.css';
+import "../components/style.css";
 
 function Landing() {
   useEffect(() => {
@@ -203,42 +203,69 @@ function Landing() {
                 </Text>
               </Box>
             </TabPanel>
-            <TabPanel bg={"gray.800"} color={"white"} fontSize="xl" fontWeight={600} display={"flex"} justifyContent={"center"} alignItems={"center"} textAlign={"center"} h={"40vh"}>
-              <Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDirection={"column"} gap={4}>
+            <TabPanel
+              bg={"gray.800"}
+              color={"white"}
+              fontSize="xl"
+              fontWeight={600}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              textAlign={"center"}
+              h={"40vh"}
+            >
+              <Box
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                flexDirection={"column"}
+                gap={4}
+              >
                 <Text>For any queries, contact us at:</Text>
                 <Text>Email: discode@gmail.com</Text>
                 <Text>PH: 9754567890</Text>
               </Box>
             </TabPanel>
-            <TabPanel bg={"gray.800"} color={"white"} fontSize="lg" fontWeight={500}
-              display={"flex"} justifyContent={"center"} h={"45vh"}>
-              Q1)How do i donate?<br/>
-
-A) Users can donate either through net banking, or give physical items such as beds, clothes etc. Money can be sent by through the       
-   "Donation" page, by accessing the "Trust Fund" and following the rest of the steps in there.
-
-   Physical items are to be registered in the "Relief Inventory" page under "Donations", and is to be verified before coming to pick up 
-   your items. If the total items registered is below a certain amount, you are to deliver the items to the nearest collection site.
-
+            <TabPanel
+              bg={"gray.800"}
+              color={"white"}
+              fontSize="lg"
+              fontWeight={500}
+              display={"flex"}
+              justifyContent={"center"}
+              h={"45vh"}
+            >
+              Q1)How do i donate?
               <br />
-              
-<br/>
-
-Q2)How am i sure my donations are going to the right place?<br/>
-
-A) Users have full transparency on all transactions done using the trust fund, where no personal information is divulged, just the 
-   amount that has been added or used to buy necessary items for all relief camps. Any amount donated before it is required, or excess 
-   amounts, is stored for future disaster relief. 
-   
-   All items are updated on where they have been sent to, after the items reach said relief site. In case the user suspects foul play,
-   please contact us through the support line(tax free).
-<br/>
-<br/>
-Q3)Can i cancel a donation?<br/>
-
-A) All transaction based donations, unless a significant amount was accidently transferred, are not refundable. Physical items are 
-   verified after 2 days of registration, upon which the items can be taken down from the donation list. After submitting the item to 
-   us, it cannot be returned.
+              A) Users can donate either through net banking, or give physical
+              items such as beds, clothes etc. Money can be sent by through the
+              "Donation" page, by accessing the "Trust Fund" and following the
+              rest of the steps in there. Physical items are to be registered in
+              the "Relief Inventory" page under "Donations", and is to be
+              verified before coming to pick up your items. If the total items
+              registered is below a certain amount, you are to deliver the items
+              to the nearest collection site.
+              <br />
+              <br />
+              Q2)How am i sure my donations are going to the right place?
+              <br />
+              A) Users have full transparency on all transactions done using the
+              trust fund, where no personal information is divulged, just the
+              amount that has been added or used to buy necessary items for all
+              relief camps. Any amount donated before it is required, or excess
+              amounts, is stored for future disaster relief. All items are
+              updated on where they have been sent to, after the items reach
+              said relief site. In case the user suspects foul play, please
+              contact us through the support line(tax free).
+              <br />
+              <br />
+              Q3)Can i cancel a donation?
+              <br />
+              A) All transaction based donations, unless a significant amount
+              was accidently transferred, are not refundable. Physical items are
+              verified after 2 days of registration, upon which the items can be
+              taken down from the donation list. After submitting the item to
+              us, it cannot be returned.
             </TabPanel>
           </TabPanels>
         </Tabs>
