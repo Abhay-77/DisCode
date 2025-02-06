@@ -1,9 +1,16 @@
-const App = () => {
+
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Landing from "./components/Landing";
+
+function App() {
   return (
     <>
-    
+      <ChakraProvider>
+        <Landing />
+      </ChakraProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
