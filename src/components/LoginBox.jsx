@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const LoginBox = () => {
   return (
@@ -17,9 +17,12 @@ const LoginBox = () => {
             <input type="text" placeholder="Password" />
           </label>
         </form>
+        <h3>
+          Don't have an existing account? <Link>Sign up</Link>
+        </h3>
       </section>
     </>
   );
-}
+};
 
-export default LoginBox
+export default LoginBox;
