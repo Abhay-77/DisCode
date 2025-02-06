@@ -4,10 +4,12 @@ import { Box, Divider, Card, CardBody, Text, Button } from "@chakra-ui/react";
 import { LiaDonateSolid } from "react-icons/lia";
 import TransactionHistory from "./TransactionHistory";
 import { NavLink } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function TrustFunds() {
   return (
     <div>
+      <ChakraProvider>
       <Sidebar />
       <Box ml={"64px"}>
         <Box
@@ -63,7 +65,8 @@ function TrustFunds() {
             </CardBody>
           </Card>
         </Box>
-      </Box>
+        </Box>
+        </ChakraProvider>
     </div>
   );
 }
