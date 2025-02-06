@@ -8,9 +8,8 @@ const userSchema = z.object({
 });
 
 export async function signInUser(formData) {
-  const parsedData = userSchema.safeParse(formData)
+  const parsedData = userSchema.safeParse(formData);
   if (!parsedData.success) {
-      
   }
   if (await isEmailExists(formData.email)) {
     alert("Account already exists");

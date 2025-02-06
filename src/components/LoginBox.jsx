@@ -49,7 +49,7 @@ const LoginBox = ({ setPage }) => {
         <h3>
           Don't have an existing account?{" "}
           <Link to="/signin" onClick={() => setPage("signin")}>
-            Sign up
+            Sign Up
           </Link>
         </h3>
       </section>
