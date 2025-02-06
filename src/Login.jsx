@@ -4,7 +4,6 @@ import SignInBox from './components/SignInBox'
 
 const Login = () => {
   const [page, setPage] = useState("login")
-  console.log(page)
   return (
     <>
       <main className="loginpage">

@@ -12,7 +12,7 @@ const LoginBox = ({setPage}) => {
           </label>
           <label htmlFor="password">
             <h2>Password</h2>
-            <input type="text" placeholder="Password" />
+            <input type="password" placeholder="Password" />
           </label>
           <button type="submit">Login</button>
         </form>
