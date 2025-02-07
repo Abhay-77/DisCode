@@ -14,8 +14,8 @@ import ReliefInv from "./ReliefInv.jsx";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<App />} /> */}
-        <Route path="/" element={<ReliefInv />} />
+        <Route path="/" element={<App />} />
+        <Route path="/donors" element={<ReliefInv />} />
         <Route path="/camps" element={<Camps />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Login />} />
