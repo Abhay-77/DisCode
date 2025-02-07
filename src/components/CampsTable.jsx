@@ -63,7 +63,7 @@ export default () => {
               <Tr>
                 <Th>Camp name</Th>
                 <Th>Beds</Th>
-                <Th>CloThs</Th>
+                <Th>Cloths</Th>
                 <Th>Food</Th>
                 <Th>Water(liTres)</Th>
               </Tr>
