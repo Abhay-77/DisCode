@@ -9,11 +9,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Donate from "./components/Donate.jsx";
 import TransactionHistory from "./components/TransactionHistory.jsx";
 import TrustFunds from "./components/TrustFunds.jsx";
+import ReliefInv from "./ReliefInv.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        {/* <Route path="/" element={<App />} /> */}
+        <Route path="/" element={<ReliefInv />} />
         <Route path="/camps" element={<Camps />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Login />} />
