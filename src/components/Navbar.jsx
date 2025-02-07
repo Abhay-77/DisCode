@@ -64,6 +64,24 @@ export default function Navbar() {
                 </NavLink>
               </MenuList>
             </Menu>
+            <Menu bg={"gray.50"}>
+            <MenuButton icon={<FaChevronDown />}>
+              <Text fontSize="lg">Patient</Text>
+            </MenuButton>
+            <MenuList p={3} bg={"white"}>
+              <NavLink to="/PatientReg">
+                <Text fontSize="lg" color={"black"}>
+                  Patient Registration
+                </Text>
+              </NavLink>
+              <Divider color={"black"} />
+              <NavLink to="/PatientDiag">
+                <Text fontSize="lg" color={"black"}>
+                  Patient Diagnosis
+                </Text>
+              </NavLink>
+            </MenuList>
+          </Menu>
             <NavLink to="/camps">
               <Text fontSize={{ base: "sm", md: "lg" }}>Camps</Text>
             </NavLink>

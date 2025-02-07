@@ -9,6 +9,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Donate from "./components/Donate.jsx";
 import TrustFunds from "./components/TrustFunds.jsx";
 import TransacHis from "./components/TransacHis.jsx";
+import PatientReg from "./components/PatientReg.jsx";
 import ReliefInv from "./ReliefInv.jsx";
 import Patients from "./PatientList.jsx"
 
@@ -24,7 +25,10 @@ createRoot(document.getElementById("root")).render(
         <Route path="/camps" element={<Camps />} />
         <Route path="/TrustFunds" element={<TrustFunds />} />
         <Route path="/donate" element={<Donate />} />
-        <Route path="/transactionHistory" element={<TransacHis />} />
+      <Route path="/transactionHistory" element={<TransacHis />} />
+      <Route path="/PatientDiag" element={<TransacHis />} />
+      <Route path="/PatientReg" element={<PatientReg />} />
+      
       </Routes>
     </BrowserRouter>
 );
