@@ -2,7 +2,6 @@ import React from "react";
 import Sidebar from "./sidebar";
 import { Box, Divider, Card, CardBody, Text, Button } from "@chakra-ui/react";
 import { LiaDonateSolid } from "react-icons/lia";
-import TransactionHistory from "./TransactionHistory";
 import { NavLink } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -52,7 +51,7 @@ function TrustFunds() {
               >
                 Available Funds: 12,45,645 /-
               </Text>
-              <NavLink to={"/transactionhistory"}>
+              <NavLink to={"/transactionHistory"}>
                 <Button variant={"outline"} fontSize="4xl" p={7} w={"70vh"}>
                   Transaction History
                 </Button>
