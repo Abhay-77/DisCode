@@ -14,7 +14,7 @@ function TrustFunds() {
         <Box
           ml={"70px"}
           p={3}
-          fontSize="5xl"
+          fontSize={{md:"5xl",base:"3xl "}}
           fontWeight={700}
           display={"flex"}
           alignItems={"center"}
