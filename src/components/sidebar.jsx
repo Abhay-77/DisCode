@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import { IoHomeOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
+
 function sidebar() {
   return (
     <Box
