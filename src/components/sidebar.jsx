@@ -17,13 +17,22 @@ function sidebar({icon}) {
         h={"100%"}
         zIndex={999}
       >
-        <Box mt={"40px"} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'start'} gap={'2rem'}>
+        <Box
+          mt={"40px"}
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"center"}
+          justifyContent={"start"}
+          gap={"2rem"}
+        >
           <NavLink to="/">
             <IoHomeOutline fontSize={"30px"} />
-          </NavLink>{icon && 
-          <NavLink to="/">
-            <FaPlus />
-          </NavLink>}
+          </NavLink>
+          {icon && (
+            <NavLink to="/PatientReg">
+              <FaPlus />
+            </NavLink>
+          )}
         </Box>
       </Box>
     </ChakraProvider>
