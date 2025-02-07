@@ -70,9 +70,10 @@ const Patients = () => {
   return (
     <>
       <Sidebar icon={<FaPlus/>}/>
-      <section className="camppage">
+      <section className="campage">
         <nav className="patientnav">Patient Diagnosis</nav>
         <PatientList />
+        <img src="/rainscale.png" alt="" />
       </section>
     </>
   );

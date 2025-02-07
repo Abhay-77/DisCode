@@ -111,3 +111,22 @@ Th {
   font-weight: bold;
   color: white;
 }
+.rain {
+  background: #3f1515;
+}
+.campage {
+  min-height: 120vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(245, 42%, 82%);
+  flex-direction: column;
+  gap: 2rem;
+}
+.campage .searchadd {
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  /* background: #000; */
+}
