@@ -144,15 +144,17 @@ function BasicUsage({hChange,addItem}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Register</Button>
+      <Button onClick={onOpen} color={"white"} _hover={{ bg: "blue.300" }}>
+        Register
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>Register</ModalHeader>
           <ModalCloseButton />
           <ModalBody display={"flex"} flexDirection={"column"} gap={"10px"}>
-            Name{" "}
+            Name
             <Input
               type="text"
               name="name"
@@ -176,10 +178,15 @@ function BasicUsage({hChange,addItem}) {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button
+              variant={"ghost"}
+              colorScheme="blue"
+              mr={3}
+              onClick={onClose}
+            >
               Close
             </Button>
-            <Button variant="ghost" onClick={addItem}>
+            <Button colorScheme="blue" onClick={addItem}>
               Submit
             </Button>
           </ModalFooter>
