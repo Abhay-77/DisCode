@@ -74,4 +74,22 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(220, 218, 240);
+  flex-direction: column;
+  gap: 2rem;
+}
+.camppage .searchadd {
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+  /* background: #000; */
+}
+.searchadd button {
+  width: 25%;
+  background-color: rgb(80, 139, 218);
+  border-radius: 10px;
+  height: 2.5rem;
+}
+.addrecorddiv {
+  width:100% ;
+  background: #000;
 }
