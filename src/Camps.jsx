@@ -5,10 +5,9 @@ import CampsTable from "./components/CampsTable";
 function Camps() {
   return (
     <>
-
       <Navbar />
       <section className="camppage">
-      <CampsTable />
+        <CampsTable />
       </section>
     </>
   );
