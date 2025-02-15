@@ -12,13 +12,14 @@ function TrustFunds() {
       <Sidebar />
       <Box ml={"64px"}>
         <Box
-          ml={"70px"}
+          ml={{md:"70px",base:"10px"}}
           p={3}
           fontSize={{md:"5xl",base:"3xl "}}
           fontWeight={700}
           display={"flex"}
           alignItems={"center"}
-          flexDirection={"row"}
+            flexDirection={"row"}
+            zIndex={1000}
         >
           <LiaDonateSolid fontSize={"60px"} color="green" />
           Trust Fund
@@ -30,9 +31,10 @@ function TrustFunds() {
           bg={"gray.100"}
           display={"flex"}
           justifyContent={"center"}
-          alignItems={"center"}
+            alignItems={"center"}
+            zIndex={500}
         >
-          <Card w={"50%"} h={"65%"} p={6}>
+          <Card w={{md:"50%",base:"100vw"}} h={{md:"65%",base:"100vw"}} p={6}  zIndex={500}> 
             <CardBody
               display={"flex"}
               flexDirection={"column"}
@@ -41,7 +43,7 @@ function TrustFunds() {
               gap={4}
             >
               <Text
-                fontSize="4xl"
+                fontSize={{ md: "4xl", base: "xl" }}
                 fontWeight={700}
                 bg={"green.400"}
                 color={"white"}
@@ -52,12 +54,12 @@ function TrustFunds() {
                 Available Funds: 12,45,645 /-
               </Text>
               <NavLink to={"/transactionHistory"}>
-                <Button variant={"outline"} fontSize="4xl" p={7} w={"70vh"}>
+                <Button variant={"outline"}  fontSize={{ md: "4xl", base: "xl" }} p={7} w={{md:"70vh",base:"auto"}}>
                   Transaction History
                 </Button>
               </NavLink>
               <NavLink to={"/donate"}>
-                <Button variant={"outline"} fontSize="4xl" p={7} w={"70vh"}>
+                <Button variant={"outline"} fontSize={{ md: "4xl", base: "xl" }} p={7} w={{md:"70vh",base:"auto"}}>
                   Donate
                 </Button>
               </NavLink>
