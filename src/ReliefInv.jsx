@@ -60,7 +60,7 @@ export default () => {
       ready: true,
     },
   ];
-  const [product, setProduct] = useState({})
+  const [product, setProduct] = useState({});
   const [newData, setNewData] = useState(data);
   const [searchValue, setSearchValue] = useState("");
   function handleChange(e) {
@@ -70,14 +70,14 @@ export default () => {
       data.filter((e) => {
         if (e.name.toLowerCase().includes(value.toLowerCase())) return true;
         return false;
-      })
+      }),
     );
   }
   function hChange(e) {
-    setProduct({...product,[e.target.name]:e.target.value})
+    setProduct({ ...product, [e.target.name]: e.target.value });
   }
   function addItem() {
-    setNewData([...newData,product])
+    setNewData([...newData, product]);
   }
   return (
     <>
@@ -98,7 +98,7 @@ export default () => {
                 value={searchValue}
               />
             </InputGroup>
-            <BasicUsage hChange={hChange} addItem={addItem}/>
+            <BasicUsage hChange={hChange} addItem={addItem} />
           </div>
           <InvTable data={newData} />
         </section>
@@ -140,7 +140,7 @@ function InvTable({ data }) {
     </>
   );
 }
-function BasicUsage({hChange,addItem}) {
+function BasicUsage({ hChange, addItem }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>

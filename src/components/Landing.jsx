@@ -53,7 +53,7 @@ function Landing() {
             h="100vh"
           >
             <Img src={flood} alt="flood" borderRadius={"2xl"} />
-            <Box ml={6} w={{md:"500px",sm:"400px"}}>
+            <Box ml={6} w={{ md: "500px", sm: "400px" }}>
               <Box
                 fontSize="4xl"
                 fontWeight={800}
@@ -87,7 +87,7 @@ function Landing() {
             h="90vh"
           >
             <Img src={help} alt="help" borderRadius={"2xl"} />
-            <Box ml={6} w={{md:"500px",sm:"400px"}}>
+            <Box ml={6} w={{ md: "500px", sm: "400px" }}>
               <Box
                 fontSize="4xl"
                 fontWeight={800}
@@ -119,7 +119,7 @@ function Landing() {
             h="90vh"
           >
             <Img src={hope} alt="hope" borderRadius={"2xl"} />
-            <Box ml={6} w={{md:"500px",sm:"400px"}}>
+            <Box ml={6} w={{ md: "500px", sm: "400px" }}>
               <Box
                 fontSize="4xl"
                 fontWeight={800}
@@ -152,7 +152,7 @@ function Landing() {
             h="90vh"
           >
             <Img src={food} alt="food" borderRadius={"2xl"} w={"750px"} />
-            <Box ml={6} w={{md:"500px",sm:"400px"}}>
+            <Box ml={6} w={{ md: "500px", sm: "400px" }}>
               <Box
                 fontSize="4xl"
                 fontWeight={800}

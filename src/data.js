@@ -54,11 +54,11 @@ export async function loginUser(formData) {
 }
 
 export async function fetchCampsData() {
-  const {data,error} = await supabase.from('Camps').select()
+  const { data, error } = await supabase.from("Camps").select();
   if (error) {
-    return 0
+    return 0;
   } else {
-    console.log(data)
-    return data
+    console.log(data);
+    return data;
   }
 }
