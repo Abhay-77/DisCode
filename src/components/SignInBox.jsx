@@ -1,54 +1,44 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInUser } from "../data";
-import { useState } from "react";
+import { useActionState, useEffect } from "react";
 
 export default ({ setPage }) => {
-  const [formData, setFormData] = useState({});
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-  function handleSubmit(e) {
-    e.preventDefault();
-    signInUser(formData);
-  }
+  const initialState = { message: null, errors: {}, success: false };
+  const [state, formAction] = useActionState(signInUser, initialState);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (state.success) {
+      navigate("/login");
+      setPage("login");
+    }
+  }, [state.success]);
   return (
     <>
       <section className="loginbox">
         <h1 className="heading">Sign in</h1>
-        <form onSubmit={handleSubmit}>
+        <form action={formAction}>
           <label htmlFor="username">
             <h2>Username</h2>
-            <input
-              type="text"
-              placeholder="Username"
-              name="username"
-              onChange={handleChange}
-              value={formData.username}
-              required
-            />
+            <input type="text" placeholder="Username" name="username" />
+            {state?.errors?.username?.map((error) => (
+              <p>{error}</p>
+            ))}
           </label>
           <label htmlFor="email">
             <h2>Email</h2>
-            <input
-              type="text"
-              placeholder="Your email"
-              name="email"
-              onChange={handleChange}
-              value={formData.email}
-              required
-            />
+            <input type="text" placeholder="Your email" name="email" />
+            {state?.errors?.email?.map((error) => (
+              <p>{error}</p>
+            ))}
           </label>
           <label htmlFor="password">
             <h2>Password</h2>
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-              value={formData.password}
-              required
-            />
+            <input type="password" placeholder="Password" name="password" />
+            {state?.errors?.password?.map((error) => (
+              <p>{error}</p>
+            ))}
           </label>
+
           <button type="submit">Sign in</button>
         </form>
         <h3>

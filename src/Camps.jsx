@@ -8,7 +8,7 @@ function Camps() {
 
       <Navbar />
       <section className="camppage">
-      <CampsTable />
+      <CampsTable/>
       </section>
     </>
   );

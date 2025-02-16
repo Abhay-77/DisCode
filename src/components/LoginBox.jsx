@@ -1,48 +1,36 @@
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../data";
-import { useState } from "react";
+import { useState, useActionState, useEffect } from "react";
 
 const LoginBox = ({ setPage }) => {
   const [id, setId] = useState(null);
-  const [formData, setFormData] = useState({});
+  const initialState = { message: null, errors: {}, success: false };
+  const loginUserWithId = loginUser.bind(null, setId);
+  const [state, formAction] = useActionState(loginUserWithId, initialState);
   const navigate = useNavigate();
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const t = await loginUser(formData);
-    setId(t);
-    if (t) {
-      navigate("/");
-    }
-  }
+  useEffect(() => {
+    if (state.success) navigate("/");
+  }, [state.success]);
+
   return (
     <>
       <section className="loginbox">
         <h1 className="heading">Login</h1>
-        <form onSubmit={handleSubmit}>
+        <form action={formAction}>
           <label htmlFor="email">
             <h2>Email</h2>
-            <input
-              type="text"
-              placeholder="Your email"
-              name="email"
-              onChange={handleChange}
-              value={formData.email}
-              required
-            />
+            <input type="text" placeholder="Your email" name="email" />
+            {state?.errors?.email?.map((error) => (
+              <p>{error}</p>
+            ))}
           </label>
           <label htmlFor="password">
             <h2>Password</h2>
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-              value={formData.password}
-              required
-            />
+            <input type="password" placeholder="Password" name="password" />
+
+            {state?.errors?.password?.map((error) => (
+              <p>{error}</p>
+            ))}
           </label>
           <button type="submit">Login</button>
         </form>

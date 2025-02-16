@@ -93,7 +93,7 @@ body {
   width: 100%;
   background: #000;
 }
-Th {
+th {
   text-decoration: underline;
   font-weight: bolder;
 }
@@ -129,4 +129,13 @@ Th {
   gap: 1rem;
   width: 80%;
   /* background: #000; */
+}
+.abovetablebox {
+  width: 100vw;
+  max-height: 8rem;
+  background: #000;
+}
+.loginbox p {
+  font-size: small;
+  color: red;
 }

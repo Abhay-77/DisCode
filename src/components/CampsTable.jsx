@@ -9,48 +9,59 @@ import {
 } from "@chakra-ui/react";
 import { fetchCampsData } from "../data";
 import { ChakraProvider } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 export default () => {
-  const data = [
-    {
-      name: "Mec",
-      beds: 2,
-      cloths: 3,
-      food: 5,
-      water: 10,
-    },
-    {
-      name: "Mes",
-      beds: 4,
-      cloths: 6,
-      food: 7,
-      water: 10,
-    },
-    {
-      name: "CUSAT",
-      beds: 9,
-      cloths: 5,
-      food: 8,
-      water: 10,
-    },
-    {
-      name: "Rajagiri",
-      beds: 7,
-      cloths: 4,
-      food: 5,
-      water: 8,
-    },
-    {
-      name: "St Alberts",
-      beds: 8,
-      cloths: 6,
-      food: 4,
-      water: 6,
-    },
-  ];
+  // const data = [
+  //   {
+  //     name: "Mec",
+  //     beds: 2,
+  //     cloths: 3,
+  //     food: 5,
+  //     water: 10,
+  //   },
+  //   {
+  //     name: "Mes",
+  //     beds: 4,
+  //     cloths: 6,
+  //     food: 7,
+  //     water: 10,
+  //   },
+  //   {
+  //     name: "CUSAT",
+  //     beds: 9,
+  //     cloths: 5,
+  //     food: 8,
+  //     water: 10,
+  //   },
+  //   {
+  //     name: "Rajagiri",
+  //     beds: 7,
+  //     cloths: 4,
+  //     food: 5,
+  //     water: 8,
+  //   },
+  //   {
+  //     name: "St Alberts",
+  //     beds: 8,
+  //     cloths: 6,
+  //     food: 4,
+  //     water: 6,
+  //   },
+  // ];
 
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const result = await fetchCampsData();
+    setData(result);
+  }
   return (
     <>
+      <div className="abovetablebox"></div>
       <ChakraProvider>
         <TableContainer
           color={"black"}

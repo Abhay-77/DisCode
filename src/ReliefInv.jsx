@@ -115,7 +115,7 @@ function InvTable({ data }) {
         borderRadius={"10px"}
         width={"80%"}
       >
-        <Table variant="simple">
+        <Table variant="simple" size={{base:"sm",md:"md"}}>
           <Thead>
             <Tr>
               <Th>Name</Th>
@@ -130,7 +130,7 @@ function InvTable({ data }) {
                   <Td>{e.name}</Td>
                   <Td>{e.quantity}</Td>
                   <Td>
-                    <input type="checkbox" checked={e.ready} readOnly />
+                    <input type="checkbox" checked={e.ready} readOnly/>
                   </Td>
                 </Tr>
               ))}

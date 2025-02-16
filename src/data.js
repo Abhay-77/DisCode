@@ -1,29 +1,39 @@
+
 import { supabase } from "../supabase";
 import { z } from "zod";
 
-const userSchema = z.object({
-  username: z.string(),
-  password: z.string().min(6),
-  email: z.string().email(),
+const signInSchema = z.object({
+  username: z.string().min(1, { message: "Enter a username" }).trim(),
+  password: z
+    .string()
+    .min(6, { message: "Enter a password with >= 6 characters" }),
+  email: z.string().email({ message: "Please enter a mail id" }),
 });
+const loginSchema = signInSchema.omit({ username: true });
 
-export async function signInUser(formData) {
-  const parsedData = userSchema.safeParse(formData);
+export async function signInUser(prevState, formData) {
+  const rawFormData = {
+    username: formData.get("username"),
+    password: formData.get("password"),
+    email: formData.get("email"),
+  };
+  const parsedData = signInSchema.safeParse(rawFormData);
   if (!parsedData.success) {
+    return {
+      errors: parsedData.error.flatten().fieldErrors,
+      message: "Invalid fields",
+    };
   }
-  if (await isEmailExists(formData.email)) {
+  if (await isEmailExists(rawFormData.email)) {
     alert("Account already exists");
     return;
   }
-  const { error } = await supabase.from("Users").insert({
-    username: formData.username,
-    email: formData.email,
-    password: formData.password,
-  });
+  const { error } = await supabase.from("Users").insert(rawFormData);
   if (error) {
     alert("Account creation failed");
   } else {
     alert("Account created successfully");
+    return {success:true}
   }
 }
 
@@ -39,14 +49,23 @@ export async function isEmailExists(email) {
   }
 }
 
-export async function loginUser(formData) {
-  const data = await isEmailExists(formData.email);
-  if (
-    data &&
-    data.password == formData.password &&
-    data.email === formData.email
-  ) {
-    return data.id;
+export async function loginUser(setId, prevState, formData) {
+  const rawFormData = {
+    username: formData.get("username"),
+    password: formData.get("password"),
+    email: formData.get("email"),
+  };
+  const parsedData = loginSchema.safeParse(rawFormData);
+  if (!parsedData.success) {
+    return {
+      errors: parsedData.error.flatten().fieldErrors,
+      message: "Invalid fields",
+    };
+  }
+  const data = await isEmailExists(rawFormData.email);
+  if (data && data.password == rawFormData.password) {
+    setId(data.id);
+    return {success:true}
   } else {
     alert("Account doesn't exist");
     return false;
@@ -54,11 +73,10 @@ export async function loginUser(formData) {
 }
 
 export async function fetchCampsData() {
-  const {data,error} = await supabase.from('Camps').select()
+  const { data, error } = await supabase.from("Camps").select();
   if (error) {
-    return 0
+    return 0;
   } else {
-    console.log(data)
-    return data
+    return data;
   }
 }
