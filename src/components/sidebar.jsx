@@ -4,7 +4,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
 
-function sidebar({icon}) {
+function sidebar({ icon }) {
   return (
     <ChakraProvider>
       <Box

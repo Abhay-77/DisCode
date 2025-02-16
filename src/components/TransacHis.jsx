@@ -1,4 +1,3 @@
-
 import {
   TableContainer,
   Table,
@@ -16,7 +15,7 @@ function TransacHis() {
   const data = [
     {
       name: "anonymous",
-      beds: '03:15',
+      beds: "03:15",
       cloths: "2-2-2025",
       food: 5000,
     },
@@ -45,45 +44,43 @@ function TransacHis() {
       food: 40000,
     },
   ];
-    
-    
-      return (
-        <>
-          <ChakraProvider>
-            <Sidebar />
-            <TableContainer
-              color={"black"}
-              bg={"white"}
-              borderRadius={"10px"}
-              width={"80%"}
-              ml={"64px"}
-            >
-              <Table variant="simple">
-                <Thead>
-                  <Tr>
-                    <Th>Donor</Th>
-                    <Th>Time</Th>
-                    <Th>Date</Th>
-                    <Th>Amount</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {data &&
-                    data.map((e) => (
-                      <Tr key={e.name}>
-                        <Td>{e.name}</Td>
-                        <Td>{e.beds}</Td>
-                        <Td>{e.cloths}</Td>
-                        <Td>{e.food}</Td>
-                      </Tr>
-                    ))}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </ChakraProvider>
-        </>
-      );
-    };
-    
 
-export default TransacHis
+  return (
+    <>
+      <ChakraProvider>
+        <Sidebar />
+        <TableContainer
+          color={"black"}
+          bg={"white"}
+          borderRadius={"10px"}
+          width={"80%"}
+          ml={"64px"}
+        >
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th>Donor</Th>
+                <Th>Time</Th>
+                <Th>Date</Th>
+                <Th>Amount</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {data &&
+                data.map((e) => (
+                  <Tr key={e.name}>
+                    <Td>{e.name}</Td>
+                    <Td>{e.beds}</Td>
+                    <Td>{e.cloths}</Td>
+                    <Td>{e.food}</Td>
+                  </Tr>
+                ))}
+            </Tbody>
+          </Table>
+        </TableContainer>
+      </ChakraProvider>
+    </>
+  );
+}
+
+export default TransacHis;

@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import {
   TableContainer,
   Table,
@@ -69,12 +69,14 @@ import Sidebar from "./components/sidebar";
 const Patients = () => {
   return (
     <>
-      <Sidebar icon={<FaPlus/>}/>
-      <section className="campage">
-        <nav className="patientnav">Patient Diagnosis</nav>
-        <PatientList />
-        <img src="/rainscale.png" alt="" />
-      </section>
+      <Sidebar icon={<FaPlus />} />
+      <Box ml={"63px"}>
+        <section className="campage">
+          <nav className="patientnav">Patient Diagnosis</nav>
+          <PatientList />
+          <img src="/rainscale.png" alt="" />
+        </section>
+      </Box>
     </>
   );
 };

@@ -28,5 +28,5 @@ createRoot(document.getElementById("root")).render(
       <Route path="/PatientDiag" element={<Patients />} />
       <Route path="/PatientReg" element={<PatientReg />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
 );

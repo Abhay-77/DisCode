@@ -77,6 +77,6 @@ export async function fetchCampsData() {
   if (error) {
     return 0;
   } else {
-    return data;
+    return data
   }
 }
